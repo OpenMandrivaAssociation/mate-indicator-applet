@@ -1,11 +1,11 @@
 Summary:	MATE Panel applet indicator
 Name:		mate-indicator-applet
-Version:	1.2.0
+Version:	1.4.0
 Release:	1
 License:	LGPLv2+ GPLv3
 Group:		Graphical desktop/GNOME
 Url:		http://mate-desktop.org
-Source0:	http://pub.mate-desktop.org/releases/1.2/%{name}-%{version}.tar.xz
+Source0:	http://pub.mate-desktop.org/releases/1.4/%{name}-%{version}.tar.xz
 Patch0:		mate-indicator-applet-1.2.0_glib.patch
 
 BuildRequires:	intltool
@@ -46,4 +46,11 @@ NOCONFIGURE=yes ./autogen.sh
 %{_datadir}/dbus-1/services/*.service
 %{_datadir}/mate-panel/applets/*.mate-panel-applet
 %{_iconsdir}/hicolor/*/*/*
+
+
+
+%changelog
+* Wed Jun 06 2012 Matthew Dawkins <mattydaw@mandriva.org> 1.2.0-1
++ Revision: 803007
+- imported package mate-indicator-applet
 
