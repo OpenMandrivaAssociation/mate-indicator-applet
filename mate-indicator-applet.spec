@@ -1,19 +1,19 @@
+%define url_ver %(echo %{version}|cut -d. -f1,2)
+
 Summary:	MATE Panel applet indicator
 Name:		mate-indicator-applet
-Version:	1.4.0
+Version:	1.8.0
 Release:	1
 License:	LGPLv2+ GPLv3
 Group:		Graphical desktop/GNOME
 Url:		http://mate-desktop.org
-Source0:	http://pub.mate-desktop.org/releases/1.4/%{name}-%{version}.tar.xz
-Patch0:		mate-indicator-applet-1.2.0_glib.patch
-
+Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
 BuildRequires:	intltool
 BuildRequires:	mate-common
 BuildRequires:	pkgconfig(gconf-2.0)
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(indicator-0.4)
-BuildRequires:	pkgconfig(libmatepanelapplet-3.0)
+BuildRequires:	pkgconfig(libmatepanelapplet-4.0)
 Requires:	mate-panel
 
 %description
@@ -27,9 +27,9 @@ indicators include the Message Menu, Battery Menu and Sound menu.
 %prep
 %setup -q
 %apply_patches
+NOCONFIGURE=yes ./autogen.sh
 
 %build
-NOCONFIGURE=yes ./autogen.sh
 %configure2_5x \
 	--disable-static
 
@@ -46,11 +46,4 @@ NOCONFIGURE=yes ./autogen.sh
 %{_datadir}/dbus-1/services/*.service
 %{_datadir}/mate-panel/applets/*.mate-panel-applet
 %{_iconsdir}/hicolor/*/*/*
-
-
-
-%changelog
-* Wed Jun 06 2012 Matthew Dawkins <mattydaw@mandriva.org> 1.2.0-1
-+ Revision: 803007
-- imported package mate-indicator-applet
 
