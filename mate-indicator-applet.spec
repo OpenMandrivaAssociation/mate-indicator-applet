@@ -3,7 +3,7 @@
 Summary:	MATE Panel applet indicator
 Name:		mate-indicator-applet
 Version:	1.8.0
-Release:	1
+Release:	2
 License:	LGPLv2+ GPLv3
 Group:		Graphical desktop/GNOME
 Url:		http://mate-desktop.org
