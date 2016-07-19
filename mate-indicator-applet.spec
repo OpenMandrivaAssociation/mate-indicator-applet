@@ -2,8 +2,8 @@
 
 Summary:	MATE Panel applet indicator
 Name:		mate-indicator-applet
-Version:	1.8.0
-Release:	2
+Version:	1.14.0
+Release:	1
 License:	LGPLv2+ GPLv3
 Group:		Graphical desktop/GNOME
 Url:		http://mate-desktop.org
@@ -11,8 +11,8 @@ Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.
 BuildRequires:	intltool
 BuildRequires:	mate-common
 BuildRequires:	pkgconfig(gconf-2.0)
-BuildRequires:	pkgconfig(gtk+-2.0)
-BuildRequires:	pkgconfig(indicator-0.4)
+BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(indicator3-0.4)
 BuildRequires:	pkgconfig(libmatepanelapplet-4.0)
 Requires:	mate-panel
 
@@ -31,7 +31,8 @@ NOCONFIGURE=yes ./autogen.sh
 
 %build
 %configure2_5x \
-	--disable-static
+	--disable-static \
+	--with-gtk=3.0
 
 %make
 
@@ -42,7 +43,7 @@ NOCONFIGURE=yes ./autogen.sh
 
 %files -f %{name}.lang
 %doc ChangeLog COPYING
-%{_libexecdir}/indicator-applet*
+%{_libexecdir}/mate-indicator-applet*
 %{_datadir}/dbus-1/services/*.service
 %{_datadir}/mate-panel/applets/*.mate-panel-applet
 %{_iconsdir}/hicolor/*/*/*
