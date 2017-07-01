@@ -2,7 +2,7 @@
 
 Summary:	MATE Panel applet indicator
 Name:		mate-indicator-applet
-Version:	1.14.0
+Version:	1.18.0
 Release:	1
 License:	LGPLv2+ GPLv3
 Group:		Graphical desktop/GNOME
@@ -27,22 +27,20 @@ indicators include the Message Menu, Battery Menu and Sound menu.
 %prep
 %setup -q
 %apply_patches
-NOCONFIGURE=yes ./autogen.sh
 
 %build
-%configure2_5x \
-	--disable-static \
-	--with-gtk=3.0
-
+#NOCONFIGURE=yes ./autogen.sh
+%configure
 %make
 
 %install
 %makeinstall_std
 
-%find_lang %{name}
+# locales
+%find_lang %{name} --with-gnome --all-name
 
 %files -f %{name}.lang
-%doc ChangeLog COPYING
+%doc AUTHORS ChangeLog COPYING NEWS README
 %{_libexecdir}/mate-indicator-applet*
 %{_datadir}/dbus-1/services/*.service
 %{_datadir}/mate-panel/applets/*.mate-panel-applet
