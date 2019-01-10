@@ -56,7 +56,7 @@ indicators include the Message Menu, Battery Menu and Sound menu.
 %make_build
 
 %install
-%makei_install
+%make_install
 
 # locales
 %find_lang %{name} --with-gnome --all-name
