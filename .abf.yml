@@ -1,8 +1,2 @@
-removed_sources:
-  mate-indicator-applet-1.14.0.tar.xz: bbeffe27a74f11f7e7d07be6d4066bc646424772
-  mate-indicator-applet-1.18.0.tar.xz: d47283f3c49aafc8bf092692b2034cf9bf71ce4d
-  mate-indicator-applet-1.18.1.tar.xz: 7488a2772e9a77054eed9542b69cca499201a6c6
-  mate-indicator-applet-1.20.0.tar.xz: dd68ae59a38de4bf4eb98644000ab027cdee6991
-  mate-indicator-applet-1.20.1.tar.xz: 47cb8462ce01b7b939def13473e28d36dbf3754d
 sources:
-  mate-indicator-applet-1.22.0.tar.xz: 3125bd6c7da4132a91b83eee1d7311dd34d2ced9
+  mate-indicator-applet-1.22.1.tar.xz: 513f1b8dd3599de82adcd3ab15299f92720810b1
