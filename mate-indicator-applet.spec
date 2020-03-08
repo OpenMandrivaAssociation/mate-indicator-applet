@@ -2,7 +2,7 @@
 
 Summary:	MATE Panel applet indicator
 Name:		mate-indicator-applet
-Version:	1.22.1
+Version:	1.24.0
 Release:	1
 License:	LGPLv2+ GPLv3
 Group:		Graphical desktop/Other
@@ -10,6 +10,7 @@ Url:		http://mate-desktop.org
 Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
 BuildRequires:	intltool
 
+BuildRequires:	autoconf-archive
 BuildRequires:	mate-common
 BuildRequires:	pkgconfig(dbus-glib-1)
 BuildRequires:	pkgconfig(gconf-2.0)
