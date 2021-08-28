@@ -2,7 +2,7 @@
 
 Summary:	MATE Panel applet indicator
 Name:		mate-indicator-applet
-Version:	1.24.0
+Version:	1.26.0
 Release:	1
 License:	LGPLv2+ GPLv3
 Group:		Graphical desktop/Other
