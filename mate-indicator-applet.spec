@@ -9,13 +9,13 @@ Group:		Graphical desktop/Other
 Url:		http://mate-desktop.org
 Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
 BuildRequires:	intltool
-
 BuildRequires:	autoconf-archive
 BuildRequires:	mate-common
 BuildRequires:	pkgconfig(dbus-glib-1)
 BuildRequires:	pkgconfig(gconf-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(indicator3-0.4)
+BuildRequires:	pkgconfig(libido3-0.1)
 BuildRequires:	pkgconfig(libmatepanelapplet-4.0)
 BuildRequires:	pkgconfig(x11)
 
@@ -48,8 +48,7 @@ indicators include the Message Menu, Battery Menu and Sound menu.
 #---------------------------------------------------------------------------
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
 #NOCONFIGURE=yes ./autogen.sh
