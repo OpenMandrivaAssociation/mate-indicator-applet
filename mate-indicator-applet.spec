@@ -1,20 +1,21 @@
-%define url_ver %(echo %{version}|cut -d. -f1,2)
+%define mate_ver	%(echo %{version}|cut -d. -f1,2)
 
 Summary:	MATE Panel applet indicator
 Name:		mate-indicator-applet
-Version:	1.26.0
-Release:	2
+Version:	1.28.0
+Release:	1
 License:	LGPLv2+ GPLv3
 Group:		Graphical desktop/Other
-Url:		http://mate-desktop.org
-Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
+Url:		https://mate-desktop.org
+Source0:	https://pub.mate-desktop.org/releases/%{mate_ver}/%{name}-%{version}.tar.xz
 BuildRequires:	intltool
 BuildRequires:	autoconf-archive
 BuildRequires:	mate-common
+BuildRequires:	pkgconfig(ayatana-indicator3-0.4)
 BuildRequires:	pkgconfig(dbus-glib-1)
 BuildRequires:	pkgconfig(gconf-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
-BuildRequires:	pkgconfig(indicator3-0.4)
+#BuildRequires:	pkgconfig(indicator3-0.4)
 BuildRequires:	pkgconfig(libido3-0.1)
 BuildRequires:	pkgconfig(libmatepanelapplet-4.0)
 BuildRequires:	pkgconfig(x11)
@@ -52,7 +53,9 @@ indicators include the Message Menu, Battery Menu and Sound menu.
 
 %build
 #NOCONFIGURE=yes ./autogen.sh
-%configure
+%configure \
+	--with-ayatana-indicators \
+	%nil
 %make_build
 
 %install
