@@ -13,7 +13,6 @@ BuildRequires:	autoconf-archive
 BuildRequires:	mate-common
 BuildRequires:	pkgconfig(ayatana-indicator3-0.4)
 BuildRequires:	pkgconfig(dbus-glib-1)
-BuildRequires:	pkgconfig(gconf-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 #BuildRequires:	pkgconfig(indicator3-0.4)
 BuildRequires:	pkgconfig(libido3-0.1)
