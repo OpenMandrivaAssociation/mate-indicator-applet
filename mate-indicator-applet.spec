@@ -2,12 +2,13 @@
 
 Summary:	MATE Panel applet indicator
 Name:		mate-indicator-applet
-Version:	1.28.0
-Release:	2
+Version:	1.28.1
+Release:	1
 License:	LGPLv2+ GPLv3
 Group:		Graphical desktop/Other
 Url:		https://mate-desktop.org
-Source0:	https://pub.mate-desktop.org/releases/%{mate_ver}/%{name}-%{version}.tar.xz
+#Source0:	https://pub.mate-desktop.org/releases/%{mate_ver}/%{name}-%{version}.tar.xz
+Source0:	https://github.com/mate-desktop/mate-indicator-applet/releases/download/v%{version}/mate-indicator-applet-%{version}.tar.xz
 BuildRequires:	automake
 BuildRequires:	libtool-base
 BuildRequires:	slibtool
